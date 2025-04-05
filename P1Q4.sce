@@ -1,0 +1,10 @@
+clc ;
+x=[1,2,3;4,5,6;7,8,9];
+h=[1,1,1;1,1,1;1,1,1];
+disp(x,'x=');
+disp(h,'h=');
+X=fft2(x);
+H=fft2(h);
+Y=X.*H;
+y=ifft(Y);
+disp(y, '2D Circular Correlation Result: y =' );
